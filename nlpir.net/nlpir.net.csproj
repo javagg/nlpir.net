@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup Condition="$([MSBuild]::IsOsPlatform('Windows'))">
+        <Compile Include="Win.cs"/>
+    </ItemGroup>
+
+    <ItemGroup Condition="$([MSBuild]::IsOsPlatform('Linux'))">
+        <Compile Include="Linux.cs"/>
+    </ItemGroup>
+    <ItemGroup Condition="$([MSBuild]::IsOsPlatform('OSX'))">
+        <Compile Include="Osx.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="Common\**\*.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.6.0-preview8.19405.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="dlls\**\*">
+            <Pack>true</Pack>
+            <PackagePath>content\lib\</PackagePath>
+        </None>
+        <Content Include="build\**">
+            <Pack>true</Pack>
+            <PackagePath>build</PackagePath>
+        </Content>
+        <None Include="Data\**">
+            <Pack>true</Pack>
+            <PackagePath>content\Data\</PackagePath>
+        </None>
+    </ItemGroup>
+
+</Project>

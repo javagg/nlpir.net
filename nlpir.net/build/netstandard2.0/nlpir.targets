@@ -1,0 +1,23 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup Condition="$([MSBuild]::IsOsPlatform('OSX'))">
+        <None Include="$(MSBuildThisFileDirectory)../../dlls/osx64/*.so">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup Condition="$([MSBuild]::IsOsPlatform('Linux'))">
+        <None Include="$(MSBuildThisFileDirectory)../../dlls/linux64/*.so">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup Condition="$([MSBuild]::IsOsPlatform('Windows'))">
+        <None Include="$(MSBuildThisFileDirectory)../../dlls/win64/*.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)../../Data/**" LinkBase="Data">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>    
+    
+</Project>

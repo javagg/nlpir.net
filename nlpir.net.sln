@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nlpir.net.tests", "nlpir.net.tests\nlpir.net.tests.csproj", "{B378ED27-52AA-4CF9-A2C3-A52A77901AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nlpir.net", "nlpir.net\nlpir.net.csproj", "{B28A843D-754C-4BC5-B1D7-EBF8A9C21E48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B378ED27-52AA-4CF9-A2C3-A52A77901AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B378ED27-52AA-4CF9-A2C3-A52A77901AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B378ED27-52AA-4CF9-A2C3-A52A77901AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B378ED27-52AA-4CF9-A2C3-A52A77901AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28A843D-754C-4BC5-B1D7-EBF8A9C21E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28A843D-754C-4BC5-B1D7-EBF8A9C21E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28A843D-754C-4BC5-B1D7-EBF8A9C21E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28A843D-754C-4BC5-B1D7-EBF8A9C21E48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F174FEE3-2C38-4881-B44E-58F1903EC94E}
+	EndGlobalSection
+EndGlobal
